@@ -5,8 +5,12 @@
 ### search modal을 반응형으로 구현해보았다.
 
 - break point
+  - mobile
+    ![Alt text](./src/assets/readme/mobile.png)
   - tablet: 768
+    ![Alt text](./src/assets/readme/tablet.png)
   - desktop: 1280
+    ![Alt text](./src/assets/readme/desktop.png)
 - 구현 항목 세부
   - input:search로 검색어 입력
   - button:submit으로 검색 버튼
