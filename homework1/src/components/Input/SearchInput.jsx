@@ -32,7 +32,7 @@ function SearchInput() {
       <form className="relative min-w-224pxr">
         <label className="sr-only">검색</label>
         <input
-          className="relative w-full border-b-2 bg-transparent px-4pxr py-6pxr text-16pxr leading-none text-white placeholder:text-[#404040] tablet:text-20pxr desktop:py-16pxr desktop:text-38pxr"
+          className="relative w-full border-b-2 bg-transparent px-4pxr py-6pxr text-16pxr font-semibold leading-none text-white placeholder:font-semibold placeholder:text-[#404040] tablet:text-20pxr desktop:px-8pxr desktop:py-16pxr desktop:text-38pxr"
           type="search"
           placeholder="검색"
         />
