@@ -5,10 +5,10 @@ import ContentCard from './components/ContentCard';
 
 function App() {
   const [contentData, setContentData] = useState(null);
-  const [item, setItem] = useState(3);
+  const [renderCount, setRenderCount] = useState(3);
 
   function moreItem() {
-    setItem(item + 3);
+    setRenderCount(renderCount + 3);
   }
 
   useEffect(() => {
@@ -37,12 +37,12 @@ function App() {
     <main className="h-screen bg-black p-16pxr text-white">
       <ul className="grid grid-cols-3 gap-x-8pxr">
         {contentData.map((content, index) => {
-          if (index < item) {
+          if (index < renderCount) {
             return <ContentCard key={content.id} content={content} />;
           }
         })}
       </ul>
-      {item > contentData.length ? null : (
+      {renderCount > contentData.length ? null : (
         <Button moreItem={moreItem}>더 보기</Button>
       )}
     </main>
