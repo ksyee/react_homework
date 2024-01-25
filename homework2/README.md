@@ -36,6 +36,12 @@
    - '더보기' 버튼 클릭 시 카드 3개씩 추가로 렌더링
    - renderCount가 contentData.length보다 커지면 '더보기'버튼 삭제
 
+### 작동 화면
+
+1.  ![Alt text](./src/assets/readme/working1.png)
+2.  ![Alt text](./src/assets/readme/working2.png)
+3.  ![Alt text](./src/assets/readme/working3.png)
+
 ### 생각해볼 점
 
 - 라이프 사이클의 적절한 사용(올바르게 사용했나?)
