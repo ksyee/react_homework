@@ -37,7 +37,6 @@ InputRadio.propTypes = {
   index: PropTypes.number.isRequired,
   labelName: PropTypes.string.isRequired,
   styleProps: PropTypes.string.isRequired,
-  activeButton: PropTypes.number.isRequired,
   obj: PropTypes.object.isRequired,
   setObj: PropTypes.func.isRequired,
 };

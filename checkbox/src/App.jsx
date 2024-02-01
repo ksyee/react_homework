@@ -12,26 +12,42 @@ function App() {
   });
 
   useEffect(() => {
-    if (obj.activeButton === 0) {
-      setObj({
-        ...obj,
-        chicken: '후라이드',
-        chickenColor: 'text-orange-400',
-      });
-    } else if (obj.activeButton === 1) {
-      setObj({
-        ...obj,
-        chicken: '양념',
-        chickenColor: 'text-red-400',
-      });
-    } else if (obj.activeButton === 2) {
-      setObj({
-        ...obj,
+    // if (obj.activeButton === 0) {
+    //   setObj((obj) => ({
+    //     ...obj,
+    //     chicken: '후라이드',
+    //     chickenColor: 'text-orange-400',
+    //   }));
+    // } else if (obj.activeButton === 1) {
+    //   setObj((obj) => ({
+    //     ...obj,
+    //     chicken: '양념',
+    //     chickenColor: 'text-red-400',
+    //   }));
+    // } else if (obj.activeButton === 2) {
+    //   setObj((obj) => ({
+    //     ...obj,
+    //     chicken: '빅맥',
+    //     chickenColor: 'text-yellow-300 bg-black rounded-full p-8pxr',
+    //   }));
+    // }
+
+    const options = [
+      { chicken: '후라이드', chickenColor: 'text-orange-400' },
+      { chicken: '양념', chickenColor: 'text-red-500' },
+      {
         chicken: '빅맥',
         chickenColor: 'text-yellow-300 bg-black rounded-full p-8pxr',
-      });
-    }
-  }, [obj]);
+      },
+    ];
+
+    const newValue = options[obj.activeButton] || options[0];
+
+    setObj((obj) => ({
+      ...obj,
+      ...newValue,
+    }));
+  }, [obj.activeButton]);
 
   return (
     <section className="text-center">
@@ -51,7 +67,7 @@ function App() {
       })}
 
       <div className="mt-16pxr">
-        <h2 className="text-18pxr font-bold mb-8pxr">뭐 먹을거임</h2>
+        <h2 className="text-18pxr font-bold mb-16pxr">뭐 먹을거임</h2>
         <span className={`${obj.chickenColor} text-22pxr font-black`}>
           {obj.chicken}
         </span>
